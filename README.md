@@ -1,22 +1,42 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# SplitSnap 🧾⚡
 
-# Run and deploy your AI Studio app
+**SplitSnap** is a native Android expense-splitting application designed to eliminate manual receipt calculations. Built with **Kotlin**, **Jetpack Compose (Material 3)**, and **Clean MVVM Architecture**, the app combines camera capture with multimodal AI parsing to convert physical receipts into interactive, assignable expense breakdowns in real time.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/4f6f6e41-e494-4aee-b90a-ce5df7c76023
+## 🌟 Key Features
 
-## Run Locally
+* **AI Receipt OCR & Structured Parsing:** Utilizes the Google Gemini API to analyze raw receipt images and extract itemized lines, prices, subtotals, tax, and tips into strongly typed data models.
+* **Dynamic Bill Splitting:** Assign single items or split shared dishes among group members with custom tip and tax distribution.
+* **Reactive State & Live Calculations:** Built with Jetpack Compose and `StateFlow` for instant mathematical recalculations without UI stutter or lag.
+* **Offline-Ready Persistence:** Integrated **Room Database (SQLite)** with Kotlin Coroutines and Flow for caching recent receipts, breakdowns, and past history locally.
+* **Secure API Key Handling:** Utilizes the **Secrets Gradle Plugin** to load credentials locally from `.env` without exposing keys to version control.
 
-**Prerequisites:**  [Android Studio](https://developer.android.com/studio)
+---
 
+## 🛠️ Tech Stack & Architecture
 
-1. Open Android Studio
-2. Select **Open** and choose the directory containing this project
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
-5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
-6. Run the app on an emulator or physical device
-7. If you have already published your app in AI Studio, please [request upload key reset](https://support.google.com/googleplay/android-developer/answer/9842756#zippy=%2Crequest-an-upload-key-reset) in Google Play Console.
+* **Language:** Kotlin
+* **UI Framework:** Jetpack Compose, Material 3
+* **Architecture:** MVVM (Model-View-ViewModel) + Unidirectional Data Flow (UDF)
+* **Local Persistence:** Room Database (SQLite), Flow, Coroutines
+* **AI / Multimodal OCR:** Google Gemini API
+* **Asynchronous Flow:** Kotlin Coroutines, StateFlow, SharedFlow
+* **Build & Security:** Gradle (KTS), Secrets Gradle Plugin
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+* Android Studio Ladybug | 2024.2+ (or newer)
+* JDK 17+
+* Android SDK (API 24 to 36)
+* A Google Gemini API Key
+
+### Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/endgrainww-byte/SplitSnap.git](https://github.com/endgrainww-byte/SplitSnap.git)
+   cd SplitSnap
