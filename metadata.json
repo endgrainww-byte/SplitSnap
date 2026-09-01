@@ -1,0 +1,6 @@
+{
+  "name": "SplitSnap",
+  "description": "Smart receipt bill-splitting app powered by Gemini multimodal AI to extract items, calculate proportional tax and service fees, and share breakdowns.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
